@@ -38,7 +38,7 @@ access http://<agent.host>:9000/
   "version": "4.0.0",
   "gauges": {
     "remote.connection.isConnected": {
-      "value": true // You can confirm agent-controller connection is up.
+      "value": true
     }
   },
   "counters": {},
@@ -48,9 +48,13 @@ access http://<agent.host>:9000/
 }
 ```
 
+You can confirm agent-controller connection is up.
+
 ### Disconnect the agent
 
-access http://<agent.host>:9000/
+1. Disconnect the agent from Web UI.
+
+2. Access http://<agent.host>:9000/
 
 ```json
 // response
@@ -58,7 +62,7 @@ access http://<agent.host>:9000/
   "version": "4.0.0",
   "gauges": {
     "remote.connection.isConnected": {
-      "value": false // You can confirm agent-controller connection is down.
+      "value": false
     }
   },
   "counters": {},
@@ -67,3 +71,5 @@ access http://<agent.host>:9000/
   "timers": {}
 }
 ```
+
+You can confirm agent-controller connection is down.
